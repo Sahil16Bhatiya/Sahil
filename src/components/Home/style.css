@@ -1,0 +1,295 @@
+.change-text::before {
+  content: "Design";
+  animation: change infinite 5s;
+}
+
+
+#home {
+  background-color: black;
+}
+
+@keyframes change {
+  0% {
+    content: "Design";
+    color: red;
+    font-weight: 600;
+  }
+
+  50% {
+    content: "Create";
+    color: rgb(39, 232, 68);
+    font-weight: 600;
+  }
+
+  100% {
+    transform: translateX(-50%);
+    content: "Build";
+    color: blue;
+    font-weight: 600;
+   
+  }
+}
+p{
+  font-weight: 600;
+}
+/* * glitch  */
+.responsive {
+  display: inline-block;
+  animation: stretch 5s cubic-bezier(0.4, 1.4, 0.75, 0.9) infinite;
+  transform-origin: center;
+  font-weight: 600;
+}
+
+.responsive:nth-of-type(1) {
+  animation-delay: 3s;
+}
+
+.responsive :nth-of-type(2) {
+  animation-delay: 0.8s;
+}
+
+.responsive :nth-of-type(3) {
+  animation-delay: 4.8s;
+}
+
+.responsive :nth-of-type(4) {
+  animation-delay: 2s;
+}
+
+.responsive :nth-of-type(5) {
+  animation-delay: 1.2s;
+}
+
+.responsive :nth-of-type(6) {
+  animation-delay: 3.6s;
+}
+
+.responsive :nth-of-type(7) {
+  animation-delay: 2.4s;
+}
+
+.responsive :nth-of-type(8) {
+  animation-delay: 3.2s;
+}
+
+p span:nth-of-type(9) {
+  animation-delay: 4s;
+}
+
+p span:nth-of-type(10) {
+  animation-delay: 1.6s;
+}
+
+@keyframes stretch {
+  5% {
+    transform: scaleX(10);
+    opacity: 0.1;
+  }
+
+  15% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+.cd-product-viewer-wrapper {
+  text-align: center;
+  padding: 2em 0;
+  position: absolute;
+  right: 0;
+  top: 10%;
+  z-index: 0;
+  width: 800px;
+  height: 500px;
+}
+
+.cd-product-viewer-wrapper>div {
+  display: inline-block;
+}
+
+.cd-product-viewer-wrapper .product-viewer {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.cd-product-viewer-wrapper img {
+  display: block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+}
+
+.cd-product-viewer-wrapper .product-sprite {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 1600%;
+  background: url(https://codyhouse.co/demo/360-degrees-product-viewer/img/alfa.png) no-repeat center center;
+  background-size: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  -moz-transition: opacity 0.3s;
+  transition: opacity 0.3s;
+}
+
+.cd-product-viewer-wrapper.loaded .product-sprite {
+  opacity: 1;
+  cursor: ew-resize;
+}
+
+.cd-product-viewer-handle {
+  position: relative;
+  z-index: 2;
+  width: 60%;
+  max-width: 300px;
+  border-radius: 50em;
+  margin: 1em auto 3em;
+  height: 4px;
+  background: #4d4d4d;
+}
+
+.cd-product-viewer-handle .fill {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+  background: #b54240;
+  -webkit-transform: scaleX(0);
+  -moz-transform: scaleX(0);
+  -ms-transform: scaleX(0);
+  -o-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  -ms-transform-origin: left center;
+  -o-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition: -webkit-transform 0.5s;
+  -moz-transition: -moz-transform 0.5s;
+  transition: transform 0.5s;
+}
+
+.no-csstransitions .cd-product-viewer-handle .fill {
+  display: none;
+}
+
+.loaded .cd-product-viewer-handle .fill {
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s 0.3s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s 0.3s;
+  transition: transform 0.3s, opacity 0.2s 0.3s;
+}
+
+.cd-product-viewer-handle .handle {
+  position: absolute;
+  z-index: 2;
+  display: inline-block;
+  height: 44px;
+  width: 44px;
+  left: 0;
+  top: -20px;
+  background: #b54240 url(https://codyhouse.co/demo/360-degrees-product-viewer/img/cd-arrows.svg) no-repeat center center;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(181, 66, 64, 0.3), 0 0 20px rgba(0, 0, 0, 0.2);
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  color: transparent;
+  -webkit-transform: translateX(-50%) scale(0);
+  -moz-transform: translateX(-50%) scale(0);
+  -ms-transform: translateX(-50%) scale(0);
+  -o-transform: translateX(-50%) scale(0);
+  transform: translateX(-50%) scale(0);
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
+}
+
+.cd-product-viewer-handle .handle:active {
+  box-shadow: 0 0 0 0 rgba(181, 66, 64, 0), 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.loaded .cd-product-viewer-handle .handle {
+  -webkit-transform: translateX(-50%) scale(1);
+  -moz-transform: translateX(-50%) scale(1);
+  -ms-transform: translateX(-50%) scale(1);
+  -o-transform: translateX(-50%) scale(1);
+  transform: translateX(-50%) scale(1);
+  -webkit-animation: cd-bounce 0.3s 0.3s;
+  -moz-animation: cd-bounce 0.3s 0.3s;
+  animation: cd-bounce 0.3s 0.3s;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  animation-fill-mode: both;
+  cursor: ew-resize;
+}
+
+@-webkit-keyframes cd-bounce {
+  0% {
+    -webkit-transform: translateX(-50%) scale(0);
+  }
+
+  60% {
+    -webkit-transform: translateX(-50%) scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: translateX(-50%) scale(1);
+  }
+}
+
+@-moz-keyframes cd-bounce {
+  0% {
+    -moz-transform: translateX(-50%) scale(0);
+  }
+
+  60% {
+    -moz-transform: translateX(-50%) scale(1.1);
+  }
+
+  100% {
+    -moz-transform: translateX(-50%) scale(1);
+  }
+}
+
+@keyframes cd-bounce {
+  0% {
+    -webkit-transform: translateX(-50%) scale(0);
+    -moz-transform: translateX(-50%) scale(0);
+    -ms-transform: translateX(-50%) scale(0);
+    -o-transform: translateX(-50%) scale(0);
+    transform: translateX(-50%) scale(0);
+  }
+
+  60% {
+    -webkit-transform: translateX(-50%) scale(1.1);
+    -moz-transform: translateX(-50%) scale(1.1);
+    -ms-transform: translateX(-50%) scale(1.1);
+    -o-transform: translateX(-50%) scale(1.1);
+    transform: translateX(-50%) scale(1.1);
+  }
+
+  100% {
+    -webkit-transform: translateX(-50%) scale(1);
+    -moz-transform: translateX(-50%) scale(1);
+    -ms-transform: translateX(-50%) scale(1);
+    -o-transform: translateX(-50%) scale(1);
+    transform: translateX(-50%) scale(1);
+  }
+}
+
+
+@media only screen and (max-width: 600px) {
+  .cd-product-viewer-wrapper {
+   
+    width: 400px;
+  }
+}
+

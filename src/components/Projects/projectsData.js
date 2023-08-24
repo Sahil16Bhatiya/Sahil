@@ -1,0 +1,66 @@
+import {
+  project1Laptop,
+  project1Mobile,
+  project2Laptop,
+  project2Mobile,
+  project3Laptop,
+  project3Mobile,
+  project4Laptop,
+  project4Mobile,
+  project5Laptop,
+  project5Mobile,
+  project6Laptop,
+  project6Mobile,
+} from "./projectImages";
+
+export const projectData = [
+  {
+    id: 1,
+    image: project3Laptop,
+    transitionImage: project3Mobile,
+    title: "My Portfolio",
+    codeLink: "https://github.com/Sahil16Bhatiya",
+    liveLink: "https://Sahil.onrender.com/",
+  },
+  {
+    id: 2,
+    image: project2Laptop,
+    transitionImage: project2Mobile,
+    title: "Restaurant Website",
+    codeLink: "https://github.com/Sahil16Bhatiya/GujjuFlavor",
+    liveLink: "https://gujjuflavor.onrender.com/",
+  },
+  {
+    id: 3,
+    image: project1Laptop,
+    transitionImage: project1Mobile,
+    title: "A Hotel Automation System",
+    codeLink: "https://github.com/Sahil16Bhatiya/hotel",
+    liveLink: "https://sahil16bhatiya.github.io/hotel/",
+    
+  },
+  {
+    id: 4,
+    image: project4Laptop,
+    transitionImage: project4Mobile,
+    title: "KBC Website - Cyber Security",
+    codeLink: "https://github.com/Sahil16Bhatiya",
+    liveLink: "https://sahil16bhatiya.github.io/newPortfolio/cyber.html",
+  },
+  {
+    id: 5,
+    image: project5Laptop,
+    transitionImage: project5Mobile,
+    title: "Video Call React Website",
+    codeLink: "https://github.com/Sahil16Bhatiya/VCall",
+    liveLink: "https://vcall-bsa.onrender.com/",
+  },
+  {
+    id: 6,
+    image: project6Laptop,
+    transitionImage: project6Mobile,
+    title: "My Khurafati Project",
+    codeLink: "https://github.com/Sahil16Bhatiya",
+    liveLink: "https://sahil16bhatiya.github.io/BSA/",
+  },
+];
